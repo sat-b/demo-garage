@@ -1,0 +1,101 @@
+﻿@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "SF Pro Text", system-ui, -apple-system, sans-serif;
+  background: #fafaf8;
+  color: #1b1b1a;
+}
+
+button {
+  font-family: inherit;
+}
+
+.pwa-toast {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  max-width: 360px;
+  width: calc(100% - 32px);
+  background: #ffffff;
+  border: 1px solid #e5e4df;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.pwa-toast__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pwa-toast__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.pwa-toast__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1b1b1a;
+}
+
+.pwa-toast__body {
+  font-size: 12px;
+  color: #5f5e5a;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.pwa-toast__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pwa-btn {
+  border: 1px solid #e5e4df;
+  background: #f5f4f0;
+  color: #1b1b1a;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.pwa-btn--primary {
+  background: #3b6d11;
+  border-color: #3b6d11;
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .pwa-toast {
+    left: 16px;
+    right: 16px;
+    width: auto;
+  }
+}
